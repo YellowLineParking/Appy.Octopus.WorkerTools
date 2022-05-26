@@ -1,0 +1,48 @@
+# Misc folders
+[Bb]in/
+[Oo]bj/
+[Tt]emp/
+[Pp]ackages/
+/.artifacts/
+/[Tt]ools/
+.idea
+.DS_Store
+
+
+# .NET Core CLI
+/.dotnet/
+/.packages/
+dotnet-install.sh*
+*.lock.json
+
+# Visual Studio
+.vs/
+.vscode/
+launchSettings.json
+*.sln.ide/
+
+# Rider
+src/.idea/**/workspace.xml
+src/.idea/**/tasks.xml
+src/.idea/dictionaries
+src/.idea/**/dataSources/
+src/.idea/**/dataSources.ids
+src/.idea/**/dataSources.xml
+src/.idea/**/dataSources.local.xml
+src/.idea/**/sqlDataSources.xml
+src/.idea/**/dynamic.xml
+src/.idea/**/uiDesigner.xml
+
+# NuGet Packages Directory
+packages
+
+# Windows
+Thumbs.db
+
+/tools/Addins/
+/tools/Cake/
+/tools/GitVersion.CommandLine
+/tools/*
+!/tools/packages.config
+/build/**
+/**/PesterTestResults.xml
