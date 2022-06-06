@@ -8,7 +8,7 @@ The worker images are available on [docker hub](https://hub.docker.com/r/appyway
 
 | Operating System  | Installed Tools and Versions |
 | ------------- | ------------- |
-| Ubuntu 20.04  | [Dockerfile](https://github.com/YellowLineParking/Appy.Octopus.WorkerTools/blob/master/ubuntu.20.04/Dockerfile))  |
+| Ubuntu 20.04  | [Dockerfile](https://github.com/YellowLineParking/Appy.Octopus.WorkerTools/blob/master/ubuntu.20.04/Dockerfile)  |
 | Windows Server Core 2019  | [Dockerfile](https://github.com/YellowLineParking/Appy.Octopus.WorkerTools/blob/master/windows.ltsc2019/Dockerfile)  |
 
 ## Getting Started
