@@ -1,15 +1,22 @@
 FROM ubuntu:20.04
 
+ARG Java_Jdk_Version=11.0.17+8-1ubuntu2~20.04
 ARG Azure_Cli_Version=2.37.0\*
 ARG Azure_Powershell_Version=8.0.0
 ARG Octopus_Cli_Version=9.0.0
 ARG Octopus_Client_Version=13.0.3807
 ARG Powershell_Version=7.2.4\*
+ARG FirebaseTools_Version=11.20.0
 
 # get `wget` & software-properties-common
 # https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7#ubuntu-2004
 RUN apt-get update && \
     apt-get install -y wget unzip apt-utils curl software-properties-common
+
+# Get JDK
+# https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04
+# https://packages.ubuntu.com/bionic/openjdk-11-dbg
+RUN apt-get install -y openjdk-11-jdk-headless=${Java_Jdk_Version}
 
 # Get Powershell for 20.04
 RUN wget -q https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb && \
@@ -54,5 +61,8 @@ RUN wget --quiet -O - https://packages.microsoft.com/keys/microsoft.asc | gpg --
 
 # Get NodeJS
 # https://websiteforstudents.com/how-to-install-node-js-10-11-12-on-ubuntu-16-04-18-04-via-apt-and-snap/\
-RUN wget --quiet -O - https://deb.nodesource.com/setup_14.x | bash && \
+RUN wget --quiet -O - https://deb.nodesource.com/setup_16.x | bash && \
     apt-get install -y nodejs
+
+# Install firebase-tools
+RUN npm install -g firebase-tools@${FirebaseTools_Version}

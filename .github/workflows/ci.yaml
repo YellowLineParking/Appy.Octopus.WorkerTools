@@ -27,7 +27,7 @@ jobs:
       - name: Setup .NET 6.x
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 6.0.300
+          dotnet-version: 6.0.405
 
       - name: Build
         shell: bash
@@ -54,7 +54,7 @@ jobs:
       - name: Setup .NET 6.x
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 6.0.300
+          dotnet-version: 6.0.405
 
       - name: Build
         run: |
