@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-ARG Java_Jdk_Version=11.0.21+9-0ubuntu2~20.04
+ARG Java_Jdk_Version=11.0.22+7-0ubuntu2~20.04.1
 ARG Azure_Cli_Version=2.37.0\*
 ARG Azure_Powershell_Version=8.0.0
 ARG Octopus_Cli_Version=9.0.0

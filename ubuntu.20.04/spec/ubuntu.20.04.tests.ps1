@@ -18,7 +18,7 @@ Describe  'installed dependencies' {
     }
 
     It 'has java installed' {
-        java --version | Should -beLike "*11.0.17*"
+        java --version | Should -beLike "*11.0.22*"
         $LASTEXITCODE | Should -be 0
     }
 
@@ -44,7 +44,7 @@ Describe  'installed dependencies' {
     }
 
     It 'has node installed' {
-        node --version | Should -match '16.\d+.\d+'
+        node --version | Should -match '20.\d+.\d+'
         $LASTEXITCODE | Should -be 0
     }
 
