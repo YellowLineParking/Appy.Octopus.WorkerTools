@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-ARG Java_Jdk_Version=11.0.17+8-1ubuntu2~20.04
+ARG Java_Jdk_Version=11.0.21+9-0ubuntu2~20.04
 ARG Azure_Cli_Version=2.37.0\*
 ARG Azure_Powershell_Version=8.0.0
 ARG Octopus_Cli_Version=9.0.0
@@ -61,7 +61,7 @@ RUN wget --quiet -O - https://packages.microsoft.com/keys/microsoft.asc | gpg --
 
 # Get NodeJS
 # https://websiteforstudents.com/how-to-install-node-js-10-11-12-on-ubuntu-16-04-18-04-via-apt-and-snap/\
-RUN wget --quiet -O - https://deb.nodesource.com/setup_16.x | bash && \
+RUN wget --quiet -O - https://deb.nodesource.com/setup_20.x | bash && \
     apt-get install -y nodejs
 
 # Install firebase-tools
