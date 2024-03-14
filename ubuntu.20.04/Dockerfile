@@ -6,7 +6,7 @@ ARG Azure_Powershell_Version=8.0.0
 ARG Octopus_Cli_Version=9.0.0
 ARG Octopus_Client_Version=13.0.3807
 ARG Powershell_Version=7.2.4\*
-ARG FirebaseTools_Version=11.20.0
+ARG FirebaseTools_Version=13.5.0
 
 # get `wget` & software-properties-common
 # https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7#ubuntu-2004
@@ -61,7 +61,7 @@ RUN wget --quiet -O - https://packages.microsoft.com/keys/microsoft.asc | gpg --
 
 # Get NodeJS
 # https://websiteforstudents.com/how-to-install-node-js-10-11-12-on-ubuntu-16-04-18-04-via-apt-and-snap/\
-RUN wget --quiet -O - https://deb.nodesource.com/setup_20.x | bash && \
+RUN wget --quiet -O - https://deb.nodesource.com/setup_18.x | bash && \
     apt-get install -y nodejs
 
 # Install firebase-tools
