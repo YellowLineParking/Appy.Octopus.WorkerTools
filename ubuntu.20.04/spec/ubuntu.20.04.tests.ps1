@@ -44,12 +44,12 @@ Describe  'installed dependencies' {
     }
 
     It 'has node installed' {
-        node --version | Should -match '20.\d+.\d+'
+        node --version | Should -match '18.\d+.\d+'
         $LASTEXITCODE | Should -be 0
     }
 
     It 'has firebase-tools installed' {
-        firebase --version | Should -match '11.\d+.\d+'
+        firebase --version | Should -match '13.\d+.\d+'
         $LASTEXITCODE | Should -be 0
     }
 }
